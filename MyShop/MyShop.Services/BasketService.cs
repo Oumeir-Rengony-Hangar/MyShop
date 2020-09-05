@@ -114,7 +114,7 @@ namespace MyShop.Services
                               join p in productContext.Collection() on b.ProductId equals p.Id
                               select new BasketItemViewModel()
                               {
-                                  id = b.Id,
+                                  Id = b.Id,
                                   Quantity = b.Quantity,
                                   ProductName = p.Name,
                                   Image = p.Image,
