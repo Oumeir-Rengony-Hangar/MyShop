@@ -11,6 +11,15 @@
     <h4>Product</h4>
     <hr />
     <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            <img class="img-responsive" style="height:100px" src="~/Content/ProductImages/@Model.Image" />
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -41,14 +50,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Category)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Image)
         </dd>
 
     </dl>

@@ -31,7 +31,7 @@ namespace MyShop.WebUI.Controllers
         public ActionResult Create()
         {
             ProductManagerViewModel viewModel = new ProductManagerViewModel();
-            viewModel.Product = new Product();
+            viewModel.product = new Product();
             viewModel.productCategories = productCategories.Collection();
             return View(viewModel);
         }
@@ -70,8 +70,12 @@ namespace MyShop.WebUI.Controllers
 
             else{
                 ProductManagerViewModel viewModel = new ProductManagerViewModel();
-                viewModel.Product = new Product();
+                viewModel.product = product;
                 viewModel.productCategories = productCategories.Collection();
+
+                System.Diagnostics.Debug.WriteLine("Testing viewModel");
+                System.Diagnostics.Debug.WriteLine(viewModel);
+
                 return View(viewModel);
             }
         }
